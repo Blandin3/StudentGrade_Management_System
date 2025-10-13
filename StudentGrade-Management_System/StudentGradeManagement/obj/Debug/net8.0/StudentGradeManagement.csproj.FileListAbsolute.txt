@@ -1,0 +1,14 @@
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/bin/Debug/net8.0/StudentGradeManagement
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/bin/Debug/net8.0/StudentGradeManagement.deps.json
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/bin/Debug/net8.0/StudentGradeManagement.runtimeconfig.json
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/bin/Debug/net8.0/StudentGradeManagement.dll
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/bin/Debug/net8.0/StudentGradeManagement.pdb
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/obj/Debug/net8.0/StudentGradeManagement.GeneratedMSBuildEditorConfig.editorconfig
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/obj/Debug/net8.0/StudentGradeManagement.AssemblyInfoInputs.cache
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/obj/Debug/net8.0/StudentGradeManagement.AssemblyInfo.cs
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/obj/Debug/net8.0/StudentGradeManagement.csproj.CoreCompileInputs.cache
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/obj/Debug/net8.0/StudentGradeManagement.dll
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/obj/Debug/net8.0/refint/StudentGradeManagement.dll
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/obj/Debug/net8.0/StudentGradeManagement.pdb
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/obj/Debug/net8.0/StudentGradeManagement.genruntimeconfig.cache
+/Users/angemju/StudentGrade-Management_System/StudentGradeManagement/obj/Debug/net8.0/ref/StudentGradeManagement.dll
