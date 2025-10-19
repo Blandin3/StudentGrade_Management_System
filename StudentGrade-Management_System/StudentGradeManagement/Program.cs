@@ -1,12 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
+using System.IO; // ✅ Needed to check if file exists
 
 partial class Program
 {
     static Dictionary<string, int> students = new Dictionary<string, int>();
 
+    [STAThread] // Required for WPF
     static void Main()
+    {
+        Console.WriteLine("=== Student Grade Management System ===");
+        Console.WriteLine("Choose UI mode:");
+        Console.WriteLine("1. Console UI");
+        Console.WriteLine("2. WPF UI");
+        Console.Write("Enter choice: ");
+
+        string? uiChoice = Console.ReadLine();
+        Console.Clear();
+
+        if (uiChoice == "2")
+        {
+            Console.WriteLine("Launching WPF UI...");
+
+            // ✅ Full path to the built WPF .exe file
+            string wpfAppPath = 
+                @"C:\Users\ADMIN\StudentGrade_Management_System\StudentGrade-Management_System\StudentGradeWPF\bin\Debug\net8.0-windows\StudentGradeWPF.exe";
+
+            if (File.Exists(wpfAppPath))
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = wpfAppPath,
+                    UseShellExecute = true
+                });
+            }
+            else
+            {
+                Console.WriteLine("❌ WPF App not found at:");
+                Console.WriteLine(wpfAppPath);
+                Console.WriteLine("\n➡ Build the WPF project first using:");
+                Console.WriteLine("   cd StudentGradeWPF");
+                Console.WriteLine("   dotnet build");
+            }
+
+            return; // Exit after trying to launch WPF
+        }
+
+        // ✅ Continue running console-based UI if choice = 1
+        RunConsoleUI();
+    }
+
+    // ========== CONSOLE UI LOOP ==========
+    static void RunConsoleUI()
     {
         while (true)
         {
@@ -40,6 +87,7 @@ partial class Program
         }
     }
 
+    // ========== OTHER FUNCTIONS ==========
     static void AddStudent()
     {
         Console.Write("Enter student name: ");
@@ -115,5 +163,3 @@ partial class Program
         Console.WriteLine($"Lowest Grade: {lowest}");
     }
 }
-
-

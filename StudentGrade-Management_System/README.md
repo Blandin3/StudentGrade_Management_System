@@ -1,6 +1,9 @@
 # Student Grade Management System
 
-A simple, interactive C# console application for managing student grades. This project allows users to add students, display all students, search for a student, calculate the average grade, and find the highest and lowest grades among students.
+A simple, interactive C# application for managing student grades. The repository includes two interfaces:
+
+- A console application (`StudentGradeManagement`) with a menu-driven UI.
+- A Windows Presentation Foundation (WPF) graphical UI (`StudentGradeWPF`).
 
 ## Features
 
@@ -13,38 +16,62 @@ A simple, interactive C# console application for managing student grades. This p
 
 ## How It Works
 
-The application uses a `Dictionary<string, int>` to store student names and their corresponding grades. It presents a menu-driven interface, allowing users to select actions by entering the corresponding number. Input validation ensures grades are between 0 and 100, and handles invalid or empty inputs gracefully.
+Both projects share the same core logic for storing and computing student grades. The console project exposes that functionality via a text menu, while the WPF project presents it in a graphical form (windows, buttons and lists).
 
-## Usage
+## WPF UI (Graphical Interface)
+
+What it is
+- The `StudentGradeWPF` project is a Windows Presentation Foundation (WPF) frontend that provides a graphical interface to the same student-grade functionality found in the console app. It offers a more user-friendly experience with clickable controls and visual lists.
+
+Special notes
+- Windows-only: WPF requires Windows and a .NET runtime that supports `net8.0-windows`.
+- The UI lets you add, view and search students and shows summary information (average, highest, lowest) using standard WPF controls.
+
+How to run the WPF UI
+
+Recommended (Visual Studio)
+1. Open `StudentGrade-Management_System.sln` in Visual Studio (2022 or later).
+2. Set `StudentGradeWPF` as the startup project.
+3. Build and run (F5).
+
+Using the .NET CLI (PowerShell)
+1. Open PowerShell and navigate to the WPF project folder:
+```powershell
+cd .\StudentGradeWPF
+```
+2. Build and run the WPF project:
+```powershell
+dotnet build -c Debug
+dotnet run
+```
+
+If you prefer to run directly from the solution root with an explicit project target:
+```powershell
+dotnet run --project .\StudentGradeWPF\StudentGradeWPF.csproj
+```
+
+## Usage (Console App)
 
 ### Prerequisites
 - [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later installed on your system.
 
-### Running the Application
+### Running the Console Application
 
-1. **Clone or Download the Repository**
-   - Place the project folder on your machine.
+1. **Navigate to the Project Directory**
+```powershell
+cd .\StudentGradeManagement
+```
+2. **Build and Run**
+```powershell
+dotnet build
+dotnet run
+```
 
-2. **Navigate to the Project Directory**
-   ```sh
-   cd StudentGrade-Management_System/StudentGradeManagement
-   ```
+3. **Follow the On-Screen Menu**
+- Enter the number corresponding to the action you want to perform.
+- Input student names and grades as prompted.
 
-3. **Build the Project**
-   ```sh
-   dotnet build
-   ```
-
-4. **Run the Application**
-   ```sh
-   dotnet run
-   ```
-
-5. **Follow the On-Screen Menu**
-   - Enter the number corresponding to the action you want to perform.
-   - Input student names and grades as prompted.
-
-## Example Menu
+## Example Menu (Console)
 ```
 === Student Grade Management System ===
 1. Add Student
@@ -58,8 +85,8 @@ Choose an option:
 
 ## Notes
 - Grades must be integers between 0 and 100.
-- Student names are case-sensitive.
-- The application runs in a loop until you choose to exit.
+- Student names are case-sensitive in the console app.
+- The WPF UI provides a more discoverable and clickable interface and is intended for Windows desktops.
 
 ## License
 This project is open source and free to use for educational purposes.
