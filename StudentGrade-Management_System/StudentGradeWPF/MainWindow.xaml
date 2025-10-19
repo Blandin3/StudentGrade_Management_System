@@ -1,0 +1,52 @@
+﻿<Window x:Class="StudentGradeWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Student Grade Management" Height="450" Width="600">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Input Fields -->
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="0,0,10,0">
+            <TextBlock Text="Student Name:"/>
+            <TextBox Name="NameInput" Margin="0,5,0,10"/>
+            <TextBlock Text="Grade (0-100):"/>
+            <TextBox Name="GradeInput" Margin="0,5,0,10"/>
+            <Button Name="AddButton" Content="Add Student" Click="AddButton_Click" Margin="0,0,0,5"/>
+            <Button Name="DisplayButton" Content="Display All Students" Click="DisplayButton_Click"/>
+        </StackPanel>
+
+        <!-- Data Display -->
+        <ListView Name="StudentList" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Student Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                    <GridViewColumn Header="Grade" DisplayMemberBinding="{Binding Grade}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!-- Search and Stats -->
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBox Name="SearchInput" Width="150" Margin="0,0,10,0" />
+            <Button Name="SearchButton" Content="Search" Click="SearchButton_Click" Margin="0,0,10,0"/>
+            <TextBlock Name="SearchResult" VerticalAlignment="Center" Margin="0,0,10,0"/>
+
+            <Button Name="AverageButton" Content="Average" Click="AverageButton_Click" Margin="0,0,10,0"/>
+            <TextBlock Name="AverageLabel" VerticalAlignment="Center" Margin="0,0,10,0"/>
+
+            <Button Name="HighLowButton" Content="High &amp; Low" Click="HighLowButton_Click" Margin="0,0,10,0"/>
+            <TextBlock Name="HighLabel" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBlock Name="LowLabel" VerticalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
+
+

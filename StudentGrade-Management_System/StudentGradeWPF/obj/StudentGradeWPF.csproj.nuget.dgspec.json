@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\StudentGrade_Management_System\\StudentGrade-Management_System\\StudentGradeManagement\\StudentGradeManagement.csproj": {}
+    "C:\\Users\\ADMIN\\StudentGrade_Management_System\\StudentGrade-Management_System\\StudentGradeWPF\\StudentGradeWPF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\StudentGrade_Management_System\\StudentGrade-Management_System\\StudentGradeManagement\\StudentGradeManagement.csproj": {
+    "C:\\Users\\ADMIN\\StudentGrade_Management_System\\StudentGrade-Management_System\\StudentGradeWPF\\StudentGradeWPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\StudentGrade_Management_System\\StudentGrade-Management_System\\StudentGradeManagement\\StudentGradeManagement.csproj",
-        "projectName": "StudentGradeManagement",
-        "projectPath": "C:\\Users\\ADMIN\\StudentGrade_Management_System\\StudentGrade-Management_System\\StudentGradeManagement\\StudentGradeManagement.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\StudentGrade_Management_System\\StudentGrade-Management_System\\StudentGradeWPF\\StudentGradeWPF.csproj",
+        "projectName": "StudentGradeWPF",
+        "projectPath": "C:\\Users\\ADMIN\\StudentGrade_Management_System\\StudentGrade-Management_System\\StudentGradeWPF\\StudentGradeWPF.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\StudentGrade_Management_System\\StudentGrade-Management_System\\StudentGradeManagement\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\StudentGrade_Management_System\\StudentGrade-Management_System\\StudentGradeWPF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -21,14 +21,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net8.0-windows"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
             "projectReferences": {}
           }
         },
@@ -39,8 +39,8 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
           "imports": [
             "net461",
             "net462",
@@ -55,6 +55,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.121/PortableRuntimeIdentifierGraph.json"
